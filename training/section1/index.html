@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="/css/overrides.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="/lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -36,22 +36,608 @@
 				<!-- Any section element inside of this container is displayed as a slide -->
 				<div class="slides">
 			  	<!-- Opening slide -->
-        	<section>
+        	<section data-background="#f8f47c">
           	<img
 						   class="no-border"
 					     src="/images/title-slide.png"
-							 alt="Practicing JavaScript. A training by Joshua Sager.">
-          	<!-- <h3>Practicing JavaScript</h3> -->
+							 alt="Practicing JavaScript. A training by Joshua Sager." />
         	</section>
+
 					<section>
-						<h3>Class Slides</h3>
-							<ul>
-								<li><a href="/training/section1/index.html">Section 1</a></li>
-								<li><a href="/training/section2/index.html">Section 2</a></li>
-								<li><a href="/training/section3/index.html">Section 3</a></li>
-								<li><a href="/training/section4/index.html">Section 4</a></li>
-							</ul>
+						<h2>Introduction</h2>
+						<h3>Joshua Sager</h3>
+						<p>email: <a href="mailto:info@joshuasager.com">info@joshuasager.com</a></p>
 					</section>
+
+					<section data-background="#fff">
+						<img
+						   class="no-border"
+					     src="/images/viable.png"
+							 alt="Viable Industries." />
+					</section>
+
+					<section data-background="#fff">
+						<img
+						   class="no-border"
+					     src="/images/viable-consulting.png"
+							 alt="Viable Industries - Consulting." />
+					</section>
+
+					<section data-background="#ff8f9f">
+						<img
+						   class="no-border"
+					     src="/images/javascript-tools.png"
+							 alt="JavaScript." />
+					</section>
+
+          <section>
+            <h3>Before we get started.</h3>
+						<h3 class="fragment">Three things.</h3>
+            <ul>
+              <li class="fragment">You are smart.</li>
+              <li class="fragment">Your question matters.</li>
+              <li class="fragment">Give yourself time to learn.</li>
+            </ul>
+          </section>
+
+					<section>
+						<h3>Let's get started!</h3>
+						<p>You will need a text editor and a browser. </p><img class="full" src="/images/browser-text-editor.png"/>
+					</section>
+
+					<section data-background="#ffffff">
+						<h3>Ice Breaker Activity</h3>
+						<img
+						   class="no-border"
+					     src="/images/google.png"
+							 alt="Google Search" />
+							 <p style="color:red">Hack Google Search</p>
+					</section>
+
+					<section>
+						<h3>The Plan</h3>
+						<ul>
+							<li>Quick into about JavaScript</li>
+							<li>Setting up JavaScript</li>
+							<li>Write some JavaScript</li>
+							<li>Document Object Model (DOM)</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>What is JavaScript for?</h3>
+						<ul>
+							<li class="fragment">Primarily to manipulate HTML / CSS.</li>
+							<li class="fragment">Add Interactivity to a page or screen.</li>
+							<li class="fragment">It can do so much
+								<a href="https://developer.mozilla.org/en-US/docs/Web/API"
+								   target="_blank">more...</a></li>
+						</ul>
+					</section>
+
+          <section>
+              <h3>Four JavaScript Facts</h3>
+					</section>
+
+          <section>
+              <h3>JavaScript Fact #1</h3>
+							<p class="fragment">JavaScript is a programming language for your browser. It is interpreted instead of compiled.</p>
+
+					</section>
+
+          <section>
+              <h3>JavaScript Fact #2</h3>
+							<p class="fragment">It was orginally created by Brendan Eich, who was born in Pittsburgh!!!</p>
+					</section>
+
+          <section>
+              <h3>JavaScript Fact #3</h3>
+							<p class="fragment">Each browser and device has its own implementation of JavaScript, but the <a href="https://www.ecma-international.org/ecma-262/6.0/" target="_blank">ECMAScript specification</a> is what guides JavaScript enhancements in each browser.</p>
+					</section>
+
+          <section>
+              <h3>JavaScript Fact #4</h3>
+							<p class="fragment">JavaScript is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources" target="_blank">always updating</a>.</p>
+					</section>
+
+					<section>
+						<h3>How do you know what to use?</h3>
+						<p class="fragment">MDN is a great <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName#Browser_compatibility" target="_blank">reference</a>.</p>
+					</section>
+
+					<section>
+						<h3>THIS IS IMPORTANT!</h3>
+							<p class="fragment">Despite the constant changes, programming fundamentals <span class="fragment">ALWAYS STAY THE SAME!</span></p>
+					</section>
+
+					<section>
+						<h3>The Players and Their Roles</h3>
+						<ul>
+							<li class="fragment">HTML is the structure.</li>
+							<li class="fragment">CSS is the layout and style.</li>
+							<li class="fragment">Javascript is the brains!</li>
+		        </ul>
+		      </section>
+
+					<section>
+						<h3>Let's get to practicing: Prompt</h3>
+						<pre>
+							<code class="hljs">   window.prompt("Who is your favorite band?");</code>
+						</pre>
+					</section>
+
+					<section>
+						<img
+						   class="no-border"
+					     src="/images/weezer.png"
+							 alt="Weezer" />
+					</section>
+
+					<section>
+						<h3>But how does that apply to a web page?</h3>
+					</section>
+
+					<section>
+							<h3>Let's Try It</h3>
+							<p>Let's write your first JavaScript program.<p>
+							<ol>
+								<li class="fragment">Make a folder called "js-class".</li>
+								<li class="fragment">Create another folder called "first-js-app".</li>
+								<li class="fragment">Inside first-js-app, make a new file called index.html.</li>
+							</ol>
+							<img class="fragment" src="/images/first-app.png" alt="Screen shot of first app folder structure (js-class/first-js-app/index.html)" />
+					</section>
+
+					<section data-background="#f8f47c">
+						<h3>Our First App</h3>
+						<pre class="no-border"><code class="hljs html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+	  &lt;title&gt;Test Page&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	  &lt;p&gt;This is my awesome JavaScript code.&lt;/p&gt;
+	    &lt;script&gt;
+	      alert('Hello World!');
+	    &lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+							</code></pre>
+					</section>
+
+					<section data-background="#f8f47c">
+						<h3>Script Tags</h3>
+						<p>You can mix JavaScript and HTML. The script tag tells your browser the stuff inside is code, not content.</p>
+						<pre class="no-border"><code class="hljs html">
+&lt;script&gt;
+   // CODE GOES HERE
+&lt;/script&gt;
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Have you every added google analytics?</h3>
+						<p class="fragment">You used the script tag.</p>
+						<pre class="no-border fragment"><code class="hljs html">
+&lt;script&gt;
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-34872199-1');
+&lt;/script&gt;
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Separate Concerns</h3>
+						<p class="fragment">Put your JavaScript in a separate file.</p>
+						<img class="fragment"
+						     src="/images/js-file-structure.png"
+								 alt="JavaScript file structure js/script.js" />
+					</section>
+
+					<section data-background="#f8f47c">
+						<h3>JavaScript Files</h3>
+						<p>Just like CSS, you can split a long block of JavaScript into its own file. </p>
+						<pre class="no-border"><code <code class="hljs html javascript">
+   &lt;script src="js/script.js"&gt;&lt;/script&gt;
+		</code></pre>
+					</section>
+
+					<section>
+						<h3>Where does the script tag go?</h3>
+						<p class="fragment">That depends.</p>
+						<p class="fragment">Are you trying to manipulate what's on screen?</p>
+					</section>
+
+					<section data-background="#f8f47c">
+						<h3>Before the closing body tag</h3>
+						<pre class="no-border"><code class="hljs html">
+ &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+  &lt;head&gt;
+   &lt;title&gt;Test Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   &lt;p&gt;This is my awesome JavaScript code.&lt;/p&gt;
+   &lt;script src="js/script.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+ &lt;/html&gt;
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Where does the script tag go?</h3>
+						<p class="fragment">Are you trying to execute something immediately?</p>
+					</section>
+
+					<section data-background="#f8f47c">
+						<h3>In the head tag</h3>
+						<pre class="no-border"><code class="hljs html">
+ &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+  &lt;head&gt;
+   &lt;title&gt;Test Page&lt;/title&gt;
+   &lt;script src="js/script.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   &lt;p&gt;This is my awesome JavaScript code.&lt;/p&gt;
+  &lt;/body&gt;
+ &lt;/html&gt;
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Why does it matter?</h3>
+						<p class="fragment">It's a race!</p>
+						<p class="fragment">The instructions run line by line.</p>
+						<p><span class="fragment">one</span> <span class="fragment">at</span> <span class="fragment">a</span> <span class="fragment">time.</span></p>
+					</section>
+
+					<section>
+						<h3>Let's write something on the screen! (1 of 3)</h3>
+						<img src="/images/js-file-structure.png"
+								 alt="JavaScript file structure js/script.js" />
+					</section>
+
+					<section>
+						<h3>Let's write something on the screen! (2 of 3)</h3>
+						<pre class="no-border"><code class="hljs html">
+ &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+  &lt;head&gt;
+   &lt;title&gt;Test Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   &lt;p&gt;This is my awesome JavaScript code.&lt;/p&gt;
+   &lt;script src="js/script.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+ &lt;/html&gt;
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Let's write something on the screen! (3 of 3)</h3>
+						<pre class="no-border"><code class="hljs javascript">
+  document.write("Happy March!");
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Look under the hood!</h3>
+						<p class="fragment">Inspect the element.</p>
+					</section>
+
+					<section data-background="#fff">
+						<img src="/images/awesome.png"
+						     alt="awesome!"
+								 class="no-border"/>
+						<h3 style="color:#c4113c">Awesome!!!</h3>
+					</section>
+
+					<section>
+						<h3>Let's write something on the screen! Bonus</h3>
+						<pre class="no-border"><code class="hljs javascript">
+	document.write("Happy March!");
+	document.write("And other stuff.");
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>What about formatting?</h3>
+						<p class="fragment">That's the job of CSS.</p>
+					</section>
+
+					<section>
+						<h3>Create a CSS File</h3>
+						<img src="/images/first-app-css.png"
+						     alt="Create this folder and file: first-app/css/style.css"
+								 class="no-border" />
+					</section>
+
+					<section>
+						<h3>Add CSS Document to HTML</h3>
+						<pre class="no-border"><code class="hljs html">
+ &lt;!DOCTYPE html&gt;
+ &lt;html&gt;
+  &lt;head&gt;
+   &lt;title&gt;Test Page&lt;/title&gt;
+   &lt;link href="css/style.css" rel="stylesheet" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   &lt;p&gt;This is my awesome JavaScript code.&lt;/p&gt;
+   &lt;script src="js/script.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+ &lt;/html&gt;
+						</code></pre>
+					</section>
+
+					<section data-background="#fff">
+						<img src="/images/disappointed.png"
+						     alt="awesome!"
+								 class="no-border"/>
+						<h3 style="color:#c4113c">That doesn't really cut it.</h3>
+					</section>
+
+					<section>
+						<h3>Well...</h3>
+						<p class="fragment">It's time to talk about the DOM.</p>
+					</section>
+
+					<section>
+						<h3>The Document Object Model (DOM)</h3>
+							<p class="fragment">The DOM is a programming interface for HTML documents.</p>
+					</section>
+
+					<section>
+						<h3>The Document Object Model (DOM)</h3>
+							<p class="fragment">It represents the page so that programs can change the document structure, style, and content.</p>
+					</section>
+
+					<section>
+						<h3>The Document Object Model (DOM)</h3>
+							<p class="fragment">The DOM represents the document as nodes and objects.</p>
+							<img src="/images/dom-tree.png"
+							     alt="Simple DOM Tree"
+									 class="fragment no-border"/>
+					</section>
+
+					<section>
+						<h3>The DOM: Sample Code</h3>
+							<pre class="no-border"><code class="hljs html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Test Page&lt;/title&gt;
+    &lt;style&gt;
+      h1 {
+        color: red;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My Page&lt;/h1&gt;
+    &lt;p&gt;Hello World!&lt;/p&gt;
+    &lt;img src="img.png" /&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+			</code></pre>
+					</section>
+
+					<section>
+						<h3>What does it mean that there's a programming interface?</h3>
+						<p class="fragment">There is a list of commands that allow for access, creation, and modification.</p>
+					</section>
+
+					<section data-background="#ffffff">
+						<h3>Ice Breaker Activity: Revisited</h3>
+						<img
+						   class="no-border"
+					     src="/images/google.png"
+							 alt="Google Search" />
+							 <p style="color:red">Hack Google Search</p>
+							 <p style="color:red" class="fragment">Modified via the DOM</p>
+					</section>
+
+					<section>
+						<h3>The key to the DOM is targeting the right element.</h3>
+						<p class="fragment">tag, id and class</p>
+						<pre class="no-border fragment"><code class="hljs html">
+   &lt;h1 id="headline"&gt;Breaking News!&lt;/h1&gt;
+   &lt;p&gt;
+     Traffic is &lt;span class="warning"&gt;backed&lt;/span&gt; up in the
+     Fort Pitt Tunnel!
+   &lt;/p&gt;
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>What is the difference between id and class?</h3>
+					</section>
+
+					<section>
+						<h3>id</h3>
+						<p class="fragment">Use only once on a page.</p>
+					</section>
+
+					<section>
+						<h3>Why only once?</h3>
+						<p class="fragment">It's a specific target.</p>
+						<p class="fragment">Also used for anchor links.</p>
+						<p class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript#Tutorials">https://developer.mozilla.org/en-US/docs/Web/JavaScript#Tutorials</a></p>
+					</section>
+
+					<section>
+						<h3>class</h3>
+						<p>Use as many times as you would like.</p>
+					</section>
+					<section>
+						<h3>DOM Access: By Tag Name</h3>
+							<pre class="no-border fragment"><code class="hljs javascript">
+  // document.getElementsByTagName(tagName) - get list;
+  document.getElementsByTagName("a");
+
+  // document.getElementsByTagName(tagName)[number] - get 1;
+  document.getElementsByTagName("a")[0];
+						</code></pre>
+					</section>
+
+					<section data-background="#ffffff">
+						<h3>Get List of tags</h3>
+						<img
+						   class="no-border"
+					     src="/images/google.png"
+							 alt="Google Search" />
+							 <p style="color:red">document.getElementsByTagName("img");</p>
+					</section>
+
+					<section>
+						<h3>DOM Access: By Class Name</h3>
+							<pre class="no-border fragment"><code class="hljs javascript">
+	// document.getElementsByClassName(class) - get list;
+	document.getElementsByClassName("warning");
+
+	// document.getElementsByClassName(tagName)[number] - get 1;
+	document.getElementsByClassName("warning")[0];
+						</code></pre>
+					</section>
+
+					<section data-background="#ffffff">
+						<h3>Get List of tags</h3>
+						<img
+						   class="no-border"
+					     src="/images/google.png"
+							 alt="Google Search" />
+							 <p style="color:red">document.getElementsByClassName("rISBZc");</p>
+					</section>
+
+					<section>
+						<h3>DOM Access: By ID</h3>
+							<pre class="no-border fragment"><code class="hljs javascript">
+	// document.getElementById(id) - get 1;
+	document.getElementById("headline");
+						</code></pre>
+					</section>
+
+					<section data-background="#ffffff">
+						<h3>Get a single element</h3>
+						<img
+							 class="no-border"
+							 src="/images/google.png"
+							 alt="Google Search" />
+							 <p style="color:red">document.getElementById("dimg_6");</p>
+					</section>
+
+					<section>
+						<h3>Watch out!</h3>
+						<p class="fragment">document.getElementById vs document.getElementsByClassName</p>
+						<p class="fragment">The "s" is very important</p>
+					</section>
+
+					<section>
+						<h3>Now what?</h3>
+						<p class="fragment">If you can target an element.</p>
+						<p class="fragment">You can change an element.</p>
+						<pre class="no-border fragment"><code class="hljs javascript">
+  document.getElementsByTagName("a")[0].innerHTML = "Nailed it!";
+					</code></pre>
+					</section>
+
+					<section data-background="#ffffff">
+						<h3>Change the style</h3>
+						<img
+							 class="no-border"
+							 src="/images/google.png"
+							 alt="Google Search" />
+							 <p style="color:red">document.getElementsByClassName("e2BEnf")[0].innerHTML="&lt;h3&gt;COFFEE!&lt;/h3&gt;";</p>
+					</section>
+
+					<section>
+						<h3>Practice Exercise</h3>
+						<p class="fragment">Every day, pick a random website.</p>
+						<p class="fragment">Target the headline.</p>
+						<p class="fragment">Change it.</p>
+						<p class="fragment">Try it now.</p>
+					</section>
+
+					<section>
+						<h3>What else can you do?</h3>
+						<p class="fragment">Change styles via JavaScript</p>
+						<pre class="no-border fragment"><code class="hljs javascript">
+  document.getElementsByTagName("body")[0].style.backgroundColor="orange";
+						</code></pre>
+					</section>
+
+					<section data-background="#ffffff">
+						<h3>Get a single element</h3>
+						<img
+							 class="no-border"
+							 src="/images/google.png"
+							 alt="Google Search" />
+							 <p style="color:red">document.getElementsByTagName("body")[0].style.backgroundColor="orange";</p>
+					</section>
+
+					<section>
+						<h3>So.. Why are we hacking google?</h3>
+						<p class="fragment">We are practicing targeting html elements via tag names, id's, and class names.</p>
+					</section>
+
+					<section>
+						<h3>So.. Why are targeting them?</h3>
+						<p class="fragment">So we can manipulate them.</p>
+					</section>
+
+					<section data-background="#fff">
+						<img src="/images/awesome.png"
+						     alt="awesome!"
+								 class="no-border"/>
+						<h3 style="color:#c4113c">Ohhh yeah. Awesome!!!</h3>
+					</section>
+
+					<section>
+						<small>(1 of 3)</small>
+						<h3>We've Covered a bit of ground here.</h3>
+
+						<ul>
+							<li class="fragment">Ice Breaker</li>
+							<li class="fragment">4 JavaScript Facts</li>
+							<li class="fragment">Role of HTML, CSS, & JS</li>
+							<li class="fragment">First JS App</li>
+							<li class="fragment">Script Tags</li>
+
+						</ul>
+					</section>
+					<section>
+						<small>(2 of 3)</small>
+						<h3>We've Covered a bit of ground here.</h3>
+
+						<ul>
+							<li class="fragment">External JS files</li>
+							<li class="fragment">document.write()</li>
+							<li class="fragment">added css to a web page</li>
+						</ul>
+					</section>
+					<section>
+						<small>(3 of 3)</small>
+						<h3>We've Covered a bit of ground here.</h3>
+
+						<ul>
+							<li class="fragment">Introduction to the DOM</li>
+							<li class="fragment">document.getElementsByTagName()</li>
+							<li class="fragment">document.getElementsByClassName()</li>
+							<li class="fragment">document.getElementById()</li>
+							<li class="fragment">.innerHTML</li>
+							<li class="fragment">.style</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Up Next? Interactivity</h3>
+						<p><a href="/training/section2/index.html">Section 2</a>
+					</section>
+
 
 
 				</div>
@@ -68,10 +654,10 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: '/plugin/markdown/marked.js' },
+					{ src: '/plugin/markdown/markdown.js' },
+					{ src: '/plugin/notes/notes.js', async: true },
+					{ src: '/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
 		</script>

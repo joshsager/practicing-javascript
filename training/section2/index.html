@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<meta name="description" content="Practicing JavaScript is a 6 hour training
+		course. This training aims to teach first time JavaScripters and longtime dabblers
+		the fundamentals of the programming language within the framework of practice.">
+		<meta name="author" content="Joshua Sager">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<title>Practicing JavaScript: Training Slides</title>
+
+		<link rel="stylesheet" href="/css/reveal.css">
+		<link rel="stylesheet" href="/css/theme/black.css">
+		<link rel="stylesheet" href="/css/overrides.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="reveal">
+
+				<!-- Any section element inside of this container is displayed as a slide -->
+				<div class="slides">
+			  	<!-- Opening slide -->
+        	<section data-background="#f8f47c">
+          	<img
+						   class="no-border"
+					     src="/images/title-slide.png"
+							 alt="Practicing JavaScript. A training by Joshua Sager." />
+        	</section>
+
+          add and remove classes
+          add interactivity
+
+          Recap
+
+          Next Section. Interactivity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- <section>
+          <h1>Breakout</h1>
+          <a href="JS_Breakout-for-breakpoint-example/index.html"><img src="images/breakout.png" /></a>
+          <p class="credit">Image credit: Josh Sager</p>
+          </section> -->
+
+          <section>
+          <h3>You Will Learn About:</h3>
+          <ul>
+          <li class="fragment">Programming Fundamentals</li>
+          <li class="fragment">Our First Program</li>
+          <li class="fragment">JavaScript Files</li>
+          <li class="fragment">Developer Tools</li>
+          <li class="fragment">The DOM</li>
+          <li class="fragment">DOM Modification</li>
+          </ul>
+          </section>
+
+          <section>
+          <h3>Programming Fundamentals</h3>
+          <p>Nearly all programming languages have the same core fundamentals. Which are the following:</p>
+          <ol>
+          <li class="fragment">Execute an instruction</li>
+          <li class="fragment">Accept data, aka input</li>
+          <li class="fragment">Remember things</li>
+          <li class="fragment">Group instructions together</li>
+          <li class="fragment">Control the timing of when the instructions execute</li>
+          <li class="fragment">Output results of executed instruction(s)</li>
+          </ol>
+          </section>
+
+          <section>
+          <h3>Programming Fundamentals</h3>
+          <p class="fragment">If you can master these 6 concepts, then you will have the ability to work with nearly every programming language you come in contact with.</p>
+          </section>
+
+          <section>
+          <h3>And Actually...</h3>
+          <p class="fragment">An added benefit of learning how to write JavaScript is that it's C style syntax is very similar to many other popular languages.</p>
+          <p class="fragment">This is <a href="http://www.tiobe.com/tiobe_index">Tiobe list</a> of the currently most popular programming languages.</p>
+          </section>
+
+          <section>
+          <h3>One more thing...</h3>
+          <p class="fragment">At the time these slides were authored there are only <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">33</a> reserved words. Which is the core part of the language. I find that encouraging!</p>
+          <br />
+          <h4 class="fragment">Okay two things...</h4>
+          <p class="fragment">Most everyday development only requires less than half of them.</p>
+          </section>
+
+          <section>
+          <h1 class="title-only">So How Does it Work?</h1>
+          </section>
+
+            <section>
+                <h3>JavaScript is a client-side language</h3>
+                <p>It is a just in time complied language.</p>
+                <img src="images/client-server.jpg" alt="Laptop and server connected via the internet"/>
+          <p class="credit">Photo credits: <a href="http://www.flickr.com/photos/papalars/5210226441/" target="_blank">Andrew E. Larson</a> and <a href="http://www.flickr.com/photos/johnseb/3425464/" target="_blank">John Seb Barber</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+            </section>
+
+
+
+
+            <section>
+                <h3>Separating Instructions</h3>
+                <p>After each individual statement, you must add a semicolon.</p>
+                <pre><code>
+          &lt;script&gt;
+          console.log('Hello World!');
+          console.log('I am glad to meet you');
+          console.log('I am fuzzy');
+          &lt;/script&gt;
+          </code></pre>
+            </section>
+
+          <section>
+          <h3>Developer Tools</h3>
+          <p>console.log(); is a special command that can only be seen by the developer tools.</p>
+          <p>The console is a GREAT debugging tool. Most modern browsers have a console.</p>
+          <img src="images/console.png" />
+          </section>
+            <section>
+                <h3>Comments</h3>
+                <p>You can leave comments in your code&mdash;notes that people can read and computers will ignore.</p>
+                <pre><code>
+          &lt;script&gt;
+          /*I can wrap long comments
+          with multiple lines
+          like this*/
+          console.log('Hello World!'); //Or mark short comments like this
+          &lt;/script&gt;
+          </code></pre>
+            </section>
+
+            <section>
+                <h3>Getting results onto your screen</h3>
+                <p>Open a popup box.</p>
+                <pre><code>
+          alert('Hello World!');
+          </code></pre>
+                <p>Display a message in your console.</p>
+                <pre><code>
+          console.log('Hello World!');
+          </code></pre>
+                <p>Add something to the page.</p>
+                <pre><code>
+          document.write('Hello World!');
+          </code></pre>
+            </section>
+
+            <section>
+                <h3>Let's Develop It</h3>
+                <ul>
+                    <li class="fragment">Open index.html. Add a comment to the code.</li>
+                    <li class="fragment">Try different ways of printing your message.</li>
+                    <li class="fragment">Create a new file called mycode.js. Move your code to this file and link it to your page.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Starting with the Deep End of the Pool</h3>
+                <p>When people talk about javascript. Usually they are talking about 2 things.</p>
+                <ul>
+                  <li class="fragment">The DOM</li>
+                  <li class="fragment">The Programming Language</li>
+                </ul>
+            </section>
+
+
+
+                  <section>
+                    <h3>Summary</h3>
+                    <ul>
+                      <li class="fragment">Programming Fundamentals</li>
+                      <li class="fragment">Our First Program</li>
+                      <li class="fragment">JavaScript Files</li>
+                      <li class="fragment">Developer Tools</li>
+                      <li class="fragment">The DOM</li>
+                      <li class="fragment">DOM Modification</li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h3>Resources</h3>
+                      <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
+                        <li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
+                      </ul>
+                  </section>
+
+
+				</div>
+  		<footer>
+      </footer>
+		</div>
+
+		<script src="/lib/js/head.min.js"></script>
+		<script src="/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '/plugin/markdown/marked.js' },
+					{ src: '/plugin/markdown/markdown.js' },
+					{ src: '/plugin/notes/notes.js', async: true },
+					{ src: '/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
