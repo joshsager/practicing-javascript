@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<meta name="description" content="Practicing JavaScript is a 6 hour training
+		course. This training aims to teach first time JavaScripters and longtime dabblers
+		the fundamentals of the programming language within the framework of practice.">
+		<meta name="author" content="Joshua Sager">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<title>Practicing JavaScript: Training Slides</title>
+
+		<link rel="stylesheet" href="/css/reveal.css">
+		<link rel="stylesheet" href="/css/theme/black.css">
+		<link rel="stylesheet" href="/css/overrides.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="reveal">
+
+				<!-- Any section element inside of this container is displayed as a slide -->
+				<div class="slides">
+			  	<!-- Opening slide -->
+        	<section data-background="#f8f47c">
+          	<img
+						   class="no-border"
+					     src="/images/title-slide.png"
+							 alt="Practicing JavaScript. A training by Joshua Sager." />
+               <p>Section 3</p>
+        	</section>
+
+          <section>
+            <h3>Working with Lists.</h3>
+            <p class="fragment">Working with dynamic data.</p>
+          </section>
+
+          <section>
+          <h3>Arrays</h3>
+            <p>Arrays are lists that contain values.</p>
+            <p>You can put different types of data into an array.</p>
+            <pre>
+              <code>
+    var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+    'Blue', 'Indigo', 'Violet'];
+    var lotteryNumbers = [33, 72, 64, 18, 17, 85];
+    var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+              </code>
+            </pre>
+          </section>
+
+        <section>
+          <h3>What can you do with arrays?</h3>
+          <p>Let's check the documentation for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">arrays</a>.</p>
+        </section>
+
+      <section class="title-slide red">
+        <h3>Wait... What are Properties and Methods?</h3>
+        <h4 class="fragment">They are fundamental parts of Object Oriented Programming (OOP)</h4>
+      </section>
+
+      <section>
+        <h3>OOP Basics</h3>
+        <h4>There are 3 main parts</h4>
+        <p class="fragment">Objects contain the following:</p>
+        <ul class="slide-bullets">
+          <li class="fragment">properties</li>
+            <ul class="slide-bullets">
+              <li class="fragment">aka variables</li>
+              <li class="fragment">which hold information</li>
+            </ul>
+          </li>
+          <li class="fragment">methods
+            <ul class="slide-bullets">
+              <li class="fragment">aka functions</li>
+              <li class="fragment">which means they do stuff</li>
+            </ul>
+          </li>
+          <li class="fragment">events
+            <ul class="slide-bullets">
+              <li class="fragment">Like click</li>
+              <li class="fragment">which triggers when the event happens</li>
+            </ul></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Let's give the documention another look</h3>
+        <p>Note the properties and methods for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">arrays</a>.</p>
+        <p>This documention is great because you can click on nearly any property or method and see an example.</p>
+      </section>
+
+      <section>
+        <h3>Arrays</h3>
+        <h4>The Most Commonly User Property is</h4>
+        <ul class="slide-bullets">
+          <li class="fragment">.length</li>
+        </ul>
+        <p class="fragment">It is very handy when looping</p>
+      </section>
+
+      <section>
+        <h3>Arrays</h3>
+        <h4>The Most Commonly User Methods Are</h4>
+        <ul class="slide-bullets">
+          <li class="fragment">.pop()</li>
+          <li class="fragment">.push()</li>
+          <li class="fragment">.shift()</li>
+          <li class="fragment">.unshift()</li>
+          <li class="fragment">.slice() - this selects a range</li>
+          <li class="fragment">.splice() - this removes, or replaces</li>
+          <li class="fragment">.sort()</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Practice Array Manipulation</h3>
+        <img src="/images/practice-add-month.png"
+             class="no-border half"
+             alt="Create a list of months. Add a month to the end of the list." />
+      </section>
+
+      <section>
+        <h3>Practice Array Manipulation</h3>
+        <img src="/images/practice-remove-month.png"
+             class="no-border half"
+             alt="Create a list of months. Add a month to the end of the list." />
+      </section>
+
+      <section>
+                <h3>While loops</h3>
+                <p>While will repeat the same code over and over until some condition is met.</p>
+                <pre><code>
+var bottlesOfBeer = 99;
+while (bottlesOfBeer &gt;= 1) {
+    console.log (bottlesOfBeer + ' bottles of beer on the wall');
+    bottlesOfBeer = bottlesOfBeer - 9;
+}
+				</code></pre>
+            </section>
+            <section>
+				<h3>Infinite Loops</h3>
+                <p>Make sure something changes in the loop, or your loop will go on forever...</p>
+			</section>
+            <section>
+                <h3>For loops</h3>
+                <p>For loops are very similar, but you declare a counter in the statement.</p>
+                <pre><code>
+//will count 1 to 10
+for (var i = 1; i &lt;= 10; i++) {
+    console.log (i);
+}
+				</code></pre>
+            </section>
+            <section>
+                <h3>Loops and logic</h3>
+                <p>You can add other statements or logical operators inside the loops.</p>
+                <pre><code>
+//Count from 1 to 50
+for (var i = 1; i &lt;= 50; i++) {
+    console.log (i);
+    //Says 'Buzz' after multiples of three
+    if (i % 3 == 0) {
+        console.log (' Buzz');
+    }
+    //Says 'Bang' after multiples of five
+    if (i % 5 == 0) {
+        console.log (' Bang');
+    }
+}
+				</code></pre>
+            </section>
+            <section>
+                <h3>Break</h3>
+                <p>To exit a loop, use the break statement.</p>
+                <pre><code>
+//Count from 100 to 200
+for (var i = 100; i &lt;= 200; i++) {
+    console.log('Testing ' + i);
+    //Stop at the first multiple of 7
+    if (i % 7 == 0) {
+        console.log('Found it! ' + i);
+        break;
+    }
+}
+				</code></pre>
+            </section>
+
+
+
+				</div>
+  		<footer>
+      </footer>
+		</div>
+
+		<script src="/lib/js/head.min.js"></script>
+		<script src="/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '/plugin/markdown/marked.js' },
+					{ src: '/plugin/markdown/markdown.js' },
+					{ src: '/plugin/notes/notes.js', async: true },
+					{ src: '/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
