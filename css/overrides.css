@@ -2,3 +2,9 @@
   border: none !important;
   box-shadow: none !important;
 }
+.half{
+  max-width: 50% !important;
+}
+.smalltext{
+  font-size: .8em !important;
+}

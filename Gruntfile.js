@@ -138,7 +138,7 @@ module.exports = function(grunt) {
 			},
 			html: {
 				files: [root.map(path => path + '/*.html'),
-							  root.map(path => path + '/training/section1/*.html')]
+							  root.map(path => path + '/training/section*/*.html')]
 			},
 			markdown: {
 				files: root.map(path => path + '/*.md')

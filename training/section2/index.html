@@ -41,187 +41,423 @@
 						   class="no-border"
 					     src="/images/title-slide.png"
 							 alt="Practicing JavaScript. A training by Joshua Sager." />
+               <p>Section 2</p>
         	</section>
 
-          add and remove classes
-          add interactivity
-
-          Recap
-
-          Next Section. Interactivity.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- <section>
-          <h1>Breakout</h1>
-          <a href="JS_Breakout-for-breakpoint-example/index.html"><img src="images/breakout.png" /></a>
-          <p class="credit">Image credit: Josh Sager</p>
-          </section> -->
-
           <section>
-          <h3>You Will Learn About:</h3>
-          <ul>
-          <li class="fragment">Programming Fundamentals</li>
-          <li class="fragment">Our First Program</li>
-          <li class="fragment">JavaScript Files</li>
-          <li class="fragment">Developer Tools</li>
-          <li class="fragment">The DOM</li>
-          <li class="fragment">DOM Modification</li>
-          </ul>
+            <h3>Interactivity</h3>
+            <p class="fragment">The real fun stuff happens when users inteact with your page.</p>
           </section>
 
           <section>
-          <h3>Programming Fundamentals</h3>
-          <p>Nearly all programming languages have the same core fundamentals. Which are the following:</p>
-          <ol>
-          <li class="fragment">Execute an instruction</li>
-          <li class="fragment">Accept data, aka input</li>
-          <li class="fragment">Remember things</li>
-          <li class="fragment">Group instructions together</li>
-          <li class="fragment">Control the timing of when the instructions execute</li>
-          <li class="fragment">Output results of executed instruction(s)</li>
-          </ol>
+            <h3>What does that mean?</h3>
+            <p class="fragment">When they click.</p>
+            <p class="fragment">When they touch.</p>
+            <p class="fragment">When they scroll.</p>
+            <p class="fragment">When they move their mouse.</p>
+            <p class="fragment">When they type.</p>
+            <p class="fragment">When they speak.</p>
+            <p class="fragment">When they move.</p>
           </section>
 
           <section>
-          <h3>Programming Fundamentals</h3>
-          <p class="fragment">If you can master these 6 concepts, then you will have the ability to work with nearly every programming language you come in contact with.</p>
+            <h3>JavaScript can listen.</h3>
+            <p class="fragment">When an action happens, there can be a response.</p>
+            <p class="fragment">These actions are called events.</p>
           </section>
 
           <section>
-          <h3>And Actually...</h3>
-          <p class="fragment">An added benefit of learning how to write JavaScript is that it's C style syntax is very similar to many other popular languages.</p>
-          <p class="fragment">This is <a href="http://www.tiobe.com/tiobe_index">Tiobe list</a> of the currently most popular programming languages.</p>
+            <h3>JavaScript events.</h3>
+              <ul>
+                  <li class="fragment">click: The event occurs when the user clicks on an element</li>
+                  <li class="fragment">mouseover: The event occurs when the pointer is moved onto an element</li>
+                  <li class="fragment">keyup: The event occurs when the user releases a key</li>
+                  <li class="fragment">load: The event occurs when a document has been loaded</li>
+                  <li class="fragment">focus: The event occurs when an element gets focus</li>
+              </ul>
           </section>
 
           <section>
-          <h3>One more thing...</h3>
-          <p class="fragment">At the time these slides were authored there are only <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords">33</a> reserved words. Which is the core part of the language. I find that encouraging!</p>
-          <br />
-          <h4 class="fragment">Okay two things...</h4>
-          <p class="fragment">Most everyday development only requires less than half of them.</p>
+            <h3>Ready to make some ineractivity?</h3>
+            <h4 class="fragment">Great!</h4>
           </section>
 
           <section>
-          <h1 class="title-only">So How Does it Work?</h1>
+            <h3>Before we get started.</h3>
+            <h4 class="fragment">Let's create a good practice habit.</h4>
+            <ol>
+              <li class="fragment">What is the goal?</li>
+              <li class="fragment">What is a single step towards meeting that goal?</li>
+              <li class="fragment">How do you know if you executed that step?</li>
+              <li class="fragment">Excecute that step.</li>
+              <li class="fragment">Have you met your goal?</li>
+              <li class="fragment">Yes? stop</li>
+              <li class="fragment">No? repeat step 1 until step 6 is yes.</li>
+            </ol>
           </section>
-
-            <section>
-                <h3>JavaScript is a client-side language</h3>
-                <p>It is a just in time complied language.</p>
-                <img src="images/client-server.jpg" alt="Laptop and server connected via the internet"/>
-          <p class="credit">Photo credits: <a href="http://www.flickr.com/photos/papalars/5210226441/" target="_blank">Andrew E. Larson</a> and <a href="http://www.flickr.com/photos/johnseb/3425464/" target="_blank">John Seb Barber</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-            </section>
-
-
-
-
-            <section>
-                <h3>Separating Instructions</h3>
-                <p>After each individual statement, you must add a semicolon.</p>
-                <pre><code>
-          &lt;script&gt;
-          console.log('Hello World!');
-          console.log('I am glad to meet you');
-          console.log('I am fuzzy');
-          &lt;/script&gt;
-          </code></pre>
-            </section>
 
           <section>
-          <h3>Developer Tools</h3>
-          <p>console.log(); is a special command that can only be seen by the developer tools.</p>
-          <p>The console is a GREAT debugging tool. Most modern browsers have a console.</p>
-          <img src="images/console.png" />
+            <h3>Events and Event Listeners</h3>
+            <pre class="fragment"><code class="hljs javascript">
+  const button = document.getElementById('button');
+
+  button.addEventListener('click', function(event){
+    document.getElementById(title).innerHTML = "Hello!";
+  });
+            </code></pre>
           </section>
-            <section>
-                <h3>Comments</h3>
-                <p>You can leave comments in your code&mdash;notes that people can read and computers will ignore.</p>
-                <pre><code>
-          &lt;script&gt;
-          /*I can wrap long comments
-          with multiple lines
-          like this*/
-          console.log('Hello World!'); //Or mark short comments like this
-          &lt;/script&gt;
-          </code></pre>
-            </section>
 
-            <section>
-                <h3>Getting results onto your screen</h3>
-                <p>Open a popup box.</p>
-                <pre><code>
-          alert('Hello World!');
-          </code></pre>
-                <p>Display a message in your console.</p>
-                <pre><code>
-          console.log('Hello World!');
-          </code></pre>
-                <p>Add something to the page.</p>
-                <pre><code>
-          document.write('Hello World!');
-          </code></pre>
-            </section>
+          <section>
+            <h3>Practice Button Click</h3>
+            <img src="/images/practice-button-click.png"
+                 class="no-border half"
+                 alt="Create HTML page with a title and a button. Update the title to display hello when the button is clicked." />
+                 <pre class="fragment"><code class="hljs javascript">
+   const button = document.getElementById('button');
 
-            <section>
-                <h3>Let's Develop It</h3>
-                <ul>
-                    <li class="fragment">Open index.html. Add a comment to the code.</li>
-                    <li class="fragment">Try different ways of printing your message.</li>
-                    <li class="fragment">Create a new file called mycode.js. Move your code to this file and link it to your page.</li>
-                </ul>
-            </section>
+   button.addEventListener('click', function(event){
+     document.getElementById(title).innerHTML = "Hello!";
+   });
+                 </code></pre>
+          </section>
 
-            <section>
-                <h3>Starting with the Deep End of the Pool</h3>
-                <p>When people talk about javascript. Usually they are talking about 2 things.</p>
-                <ul>
-                  <li class="fragment">The DOM</li>
-                  <li class="fragment">The Programming Language</li>
-                </ul>
-            </section>
+          <section>
+            <h3>What are your thoughts?</h3>
+          </section>
 
+          <section>
+            <h3>Practice Replacing Class Names</h3>
+            <img src="/images/practice-change-class-name.png"
+                 class="no-border half"
+                 alt="Create HTML page with a title and a button. Update the title color when red, yellow, or green button is clicked."/>
+          </section>
 
+          <section>
+            <h3>Wow! We've gotten really far.</h3>
+            <h4 class="fragment">Without too much JavaScript.</h4>
+          </section>
 
-                  <section>
-                    <h3>Summary</h3>
-                    <ul>
-                      <li class="fragment">Programming Fundamentals</li>
-                      <li class="fragment">Our First Program</li>
-                      <li class="fragment">JavaScript Files</li>
-                      <li class="fragment">Developer Tools</li>
-                      <li class="fragment">The DOM</li>
-                      <li class="fragment">DOM Modification</li>
-                    </ul>
-                  </section>
+          <section>
+            <h3>Our next goal.<h3>
+            <h4 class="fragment">Show and hide menus.</h4>
+            <img src="/images/practice-show-hide-menu.png"
+                 class="no-border half fragment"
+                 alt="Create HTML page with a menu button a 4 stand in links. Show and hide the links when the menu button is pressed."/>
+            <h5 class="fragment">In order to pull this off.</h5>
+            <h5 class="fragment">We will need to learn some new JavaScript.</h5>
+          </section>
 
-                  <section>
-                    <h3>Resources</h3>
-                      <ul>
-                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
-                        <li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
-                      </ul>
-                  </section>
+          <section>
+            <h3>That's totally okay!</h3>
+            <h4 class="fragment">This is my every day.</h4>
+            <h4 class="fragment">Day to day programming is about concepts and patterns.</h4>
+          </section>
 
+          <section>
+            <h3>Quick Side story: State of Flow</h3>
+            <img src="/images/flow.png"
+                 class="no-border half"
+                 alt="State of flow diagram"/>
+          </section>
+
+          <section>
+            <h3>Our next goal.<h3>
+            <h4 class="fragment">Show and hide menus.</h4>
+            <img src="/images/practice-show-hide-menu.png"
+                 class="no-border half fragment"
+                 alt="Create HTML page with a menu button a 4 stand in links. Show and hide the links when the menu button is pressed."/>
+            <h5 class="fragment">We need logic.</h5>
+            <h5 class="fragment">We need to remember our choices.</h5>
+          </section>
+
+          <section>
+            <small>(1 of 3)</small>
+            <h3>Lets dive into the basics.</h3>
+            <h4 class="fragment">Each line of code is an instruction.</h4>
+          </section>
+
+          <section>
+            <small>(2 of 3)</small>
+            <h3>Lets dive into the basics.</h3>
+            <h4 class="fragment">Each line is executed one at a time.</h4>
+          </section>
+
+          <section>
+            <small>(3 of 3)</small>
+            <h3>Lets dive into the basics.</h3>
+            <h4 class="fragment">Each instruction follows a pattern.</h4>
+            <pre class="fragment"><code class="hljs JavaScript">
+  // variable pattern
+  const pi = 3.14159265;
+            </code></pre>
+            <p class="fragment">A variable is a stored value.</p>
+            <p class="fragment">Something you want to remember for later.</p>
+          </section>
+
+          <section>
+            <small>(1 of 3)</small>
+            <h3>Variable basics.</h3>
+            <h4 class="fragment">Variable pattern is (keyword) (your name) (operator) (value)</h4>
+            <p class="fragment">Very common pattern.</p>
+            <pre class="fragment"><code class="hljs JavaScript">
+  // variable pattern
+  const pi = 3.14159265;
+            </code></pre>
+          </section>
+
+          <section>
+            <small>(2 of 3)</small>
+            <h3>Variable basics.</h3>
+            <p class="fragment">Variables can hold different types of information, like words, numbers, and collections of data.</p>
+            <p class="fragment">Variable names can not have spaces, start with a number, or be a reserved keyword.</p>
+            <p class="fragment">At the time of these slides JavaScript has <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Reserved_keywords_as_of_ECMAScript_2015">43</a> reserved keywords.</p>
+          </section>
+
+          <section>
+            <small>(3 of 3)</small>
+            <h3>Variable basics.</h3>
+            <h4 class="fragment">Different kinds of variables.</h4>
+            <pre class="fragment"><code class="hljs JavaScript">
+  // variable pattern - var (value can change, function scoped)
+  var favorite_band = "Weezer";
+
+  // variable pattern - let (value can change, block scoped)
+  let favorite_band = "Weezer";
+
+  // variable pattern - constant (value can not be changed)
+  const favorite_band = "Weezer";
+            </code></pre>
+          </section>
+
+          <section>
+            <h3>Really!?!</h3>
+            <h4 class="fragment">Const can't be changed?</h4>
+            <p class="fragment">How can I try that out?</p>
+            <p class="fragment">To the console.</p>
+            <img src="/images/const.png"
+                 class="no-border fragment"
+                 alt="Console output testing const" />
+          </section>
+
+          <section>
+            <h3>Something really important just happened!</h3>
+            <h4 class="fragment">We learned something new</h4>
+            <p class="fragment">We tested the idea without having to set up new environment or html page.</p>
+            <p class="fragment">The console is GREAT for experimenting and learning.</p>
+          </section>
+
+          <section>
+            <h3>What kind of variable should you use?</h3>
+            <h4 class="fragment">Current common convention.</h4>
+            <p class="fragment">If the value does NOT change, use const.</p>
+            <p class="fragment">If the value does change, use let.</p>
+            <p class="fragment">Avoid var if possible.</p>
+          </section>
+
+          <section>
+            <h3>Revisit the Goal<h3>
+            <h4 class="fragment">Show and hide menus.</h4>
+            <img src="/images/practice-show-hide-menu.png"
+                 class="no-border half fragment"
+                 alt="Create HTML page with a menu button a 4 stand in links. Show and hide the links when the menu button is pressed."/>
+            <h5 class="fragment">We need to remember our choices. (check)</h5>
+            <h5 class="fragment">We need logic.</h5>
+          </section>
+
+          <section>
+            <small>(1 of 3)</small>
+            <h3>Logic basics.</h3>
+            <h4>Logic via conditional statements.</h4>
+            <p class="fragment">Use if to decide which lines of code to execute, based on a condition.</p>
+                <pre class="fragment"><code class="hljs javascript">
+if (condition) {
+  // statements to execute
+}
+				    </code></pre>
+                <pre class="fragment"><code class="hljs javascript">
+var bananas = 5;
+if (bananas &gt; 0) {
+  console.log ('You have some bananas!');
+}
+				    </code></pre>
+          </section>
+
+          <section>
+            <small>(2 of 3)</small>
+            <h3>Logic basics.</h3>
+            <h3>Comparison Operators</h3>
+                <table class="smalltext">
+                    <thead>
+                      <tr>
+                        <th width="150px">Example</th>
+                        <th width="250px">Name</th>
+                        <th>Result</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                       <td>a == b</td>
+                       <td>Equal</td>
+                       <td><strong><code>TRUE</code></strong> if a is equal to b (can be different types).</td>
+                      </tr>
+                      <tr>
+                       <td>a === b</td>
+                       <td>Identical</td>
+                       <td>
+                        <strong><code>TRUE</code></strong> if a is equal to b, and the same type. </td>
+                      </tr>
+                      <tr>
+                       <td>a != b</td>
+                       <td>Not equal</td>
+                       <td><strong><code>TRUE</code></strong> if a is not equal to b (can be different types).</td>
+                      </tr>
+                      <tr>
+                       <td>a !== b</td>
+                       <td>Not identical</td>
+                       <td>
+                        <strong><code>TRUE</code></strong> if a is not equal to b, or they are not the same type.</td>
+                      </tr>
+                    </tbody>
+                </table>
+          </section>
+          <section>
+            <small>(3 of 3)</small>
+            <h3>Logic basics.</h3>
+            <h3>Comparison Operators</h3>
+                <table class="smalltext">
+                    <thead>
+                      <tr>
+                        <th width="150px">Example</th>
+                        <th width="250px">Name</th>
+                        <th>Result</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                       <td>a &lt; b</td>
+                       <td>Less than</td>
+                       <td><strong><code>TRUE</code></strong> if a is strictly less than b.</td>
+                      </tr>
+                      <tr>
+                       <td>a &gt; b</td>
+                       <td>Greater than</td>
+                       <td><strong><code>TRUE</code></strong> if a is strictly greater than b.</td>
+                      </tr>
+                      <tr>
+                       <td>a &lt;= b</td>
+                       <td>Less than or equal to </td>
+                       <td><strong><code>TRUE</code></strong> if a is less than or equal to b.</td>
+                      </tr>
+                      <tr>
+                       <td>a &gt;= b</td>
+                       <td>Greater than or equal to </td>
+                       <td><strong><code>TRUE</code></strong> if a is greater than or equal to b.</td>
+                      </tr>
+                    </tbody>
+                </table>
+          </section>
+
+          <section>
+            <h3>Our process.</h3>
+            <h4 class="fragment">Let's create a good practice habit.</h4>
+            <ol>
+              <li class="fragment">What is the goal?</li>
+              <li class="fragment">What is a single step towards meeting that goal?</li>
+              <li class="fragment">How do you know if you executed that step?</li>
+              <li class="fragment">Excecute that step.</li>
+              <li class="fragment">Have you met your goal?</li>
+              <li class="fragment">Yes? stop</li>
+              <li class="fragment">No? repeat step 1 until step 6 is yes.</li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>Practice Time!<h3>
+            <h4 class="fragment">Show and hide menus.</h4>
+            <img src="/images/practice-show-hide-menu.png"
+                 class="no-border half fragment"
+                 alt="Create HTML page with a menu button a 4 stand in links. Show and hide the links when the menu button is pressed."/>
+            <h5 class="fragment">We need to remember our choices. (check)</h5>
+            <h5 class="fragment">We need logic. (check)</h5>
+          </section>
+
+          <section>
+            <h3>What are your thoughts?</h3>
+          </section>
+
+          <section>
+            <h3>Next Up.</h3>
+            <h4 class="fragment">Form Validation.</h4>
+            <img src="/images/practice-form-validation-click.png"
+                 class="no-border half fragment"
+                 alt="Create a 1 field form. Check for a valid number on button click" />
+                 <h5 class="fragment">Time to learn Functions, arguments, and returns.</h5>
+          </section>
+
+          <section>
+            <small>(1 of 2)</small>
+            <h3>Function Basics</h3>
+            <h4 class="fragment">Functions are separable, reusable pieces of code.</h4>
+          </section>
+
+          <section>
+            <small>(2 of 2)</small>
+						<h3>Using Functions</h3>
+						<p class="fragment">First, declare the function.</p>
+						<pre class="fragment"><code class="hljs javascript">
+  function is_number_valid(value) {
+    let result = false;
+    if(value &gt; 0){
+      result = true;
+    }
+    return result;
+  }
+            </code></pre>
+            <p class="fragment">Then, use it as many times as you want!</p>
+            <pre class="fragment"><code class="hljs javascript">
+  is_number_valid(6); // true
+  is_number_valid(-2); // false
+  is_number_valid("r"); // false
+            </code></pre>
+					</section>
+
+          <section>
+            <h3>Practice Time!</h3>
+            <h4 class="fragment">Form Validation.</h4>
+            <img src="/images/practice-form-validation-click.png"
+                 class="no-border half fragment"
+                 alt="Create a 1 field form. Check for a valid number on button click" />
+          </section>
+
+          <section>
+            <h3>What are your thoughts?</h3>
+          </section>
+
+          <section>
+            <h3>Practice Time!</h3>
+            <h4 class="fragment">Form Validation. No Button.</h4>
+            <img src="/images/practice-form-validation-keyup.png"
+                 class="no-border half fragment"
+                 alt="Create a 1 field form. Check for a valid number on key up" />
+                 <h5 class="fragment">Time to learn Functions, arguments, and returns.</h5>
+          </section>
+
+          <section>
+						<h3>We've Covered even more ground.</h3>
+
+						<ul>
+							<li class="fragment">Events</li>
+							<li class="fragment">Event listeners</li>
+							<li class="fragment">Conditional statements</li>
+							<li class="fragment">Conditional operators</li>
+							<li class="fragment">Functions, arguments, and returns</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Up Next? Working with Lists</h3>
+						<p><a href="/training/section3/index.html">Section 3</a>
+					</section>
 
 				</div>
   		<footer>
