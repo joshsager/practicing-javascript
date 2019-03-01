@@ -55,151 +55,203 @@
             <p>You can put different types of data into an array.</p>
             <pre>
               <code>
-    var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+    let rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
     'Blue', 'Indigo', 'Violet'];
-    var lotteryNumbers = [33, 72, 64, 18, 17, 85];
-    var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+    let lotteryNumbers = [33, 72, 64, 18, 17, 85];
+    let myFavoriteThings = ['family', 3, 'guitars', 'woodworking'];
               </code>
             </pre>
           </section>
 
         <section>
-          <h3>What can you do with arrays?</h3>
-          <p>Let's check the documentation for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">arrays</a>.</p>
+          <h3>What are arrays used for?</h3>
+          <p class="fragment">Arrays are lists of information.</p>
+					<img src="/images/practice-show-hide-menu.png"
+							 class="no-border half fragment"
+							 alt="Example of a list"/>
         </section>
 
-      <section class="title-slide red">
-        <h3>Wait... What are Properties and Methods?</h3>
-        <h4 class="fragment">They are fundamental parts of Object Oriented Programming (OOP)</h4>
-      </section>
+				<section>
+					<h3>How do they work?</h3>
+					<pre class="fragment">
+						<code>
+  // DECLARATION
+  let rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+  'Blue', 'Indigo', 'Violet'];
 
-      <section>
-        <h3>OOP Basics</h3>
-        <h4>There are 3 main parts</h4>
-        <p class="fragment">Objects contain the following:</p>
-        <ul class="slide-bullets">
-          <li class="fragment">properties</li>
-            <ul class="slide-bullets">
-              <li class="fragment">aka variables</li>
-              <li class="fragment">which hold information</li>
-            </ul>
-          </li>
-          <li class="fragment">methods
-            <ul class="slide-bullets">
-              <li class="fragment">aka functions</li>
-              <li class="fragment">which means they do stuff</li>
-            </ul>
-          </li>
-          <li class="fragment">events
-            <ul class="slide-bullets">
-              <li class="fragment">Like click</li>
-              <li class="fragment">which triggers when the event happens</li>
-            </ul></li>
-        </ul>
-      </section>
+  // GET VALUE
+  rainbowColors[3]; // Green
 
-      <section>
-        <h3>Let's give the documention another look</h3>
-        <p>Note the properties and methods for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">arrays</a>.</p>
-        <p>This documention is great because you can click on nearly any property or method and see an example.</p>
-      </section>
+						</code>
+					</pre>
+				</section>
 
-      <section>
-        <h3>Arrays</h3>
-        <h4>The Most Commonly User Property is</h4>
-        <ul class="slide-bullets">
-          <li class="fragment">.length</li>
-        </ul>
-        <p class="fragment">It is very handy when looping</p>
-      </section>
+				<section>
+					<h3>Array.length</h3>
+					<h4 class="fragment">How many items are in the list?</h4>
+						<p class="fragment">.length</p>
+						<pre class="fragment">
+							<code>
+  // DECLARATION
+  let rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+  'Blue', 'Indigo', 'Violet'];
 
-      <section>
-        <h3>Arrays</h3>
-        <h4>The Most Commonly User Methods Are</h4>
-        <ul class="slide-bullets">
-          <li class="fragment">.pop()</li>
-          <li class="fragment">.push()</li>
-          <li class="fragment">.shift()</li>
-          <li class="fragment">.unshift()</li>
-          <li class="fragment">.slice() - this selects a range</li>
-          <li class="fragment">.splice() - this removes, or replaces</li>
-          <li class="fragment">.sort()</li>
-        </ul>
-      </section>
+  // GET VALUE
+  rainbowColors.length; // 7
 
-      <section>
-        <h3>Practice Array Manipulation</h3>
-        <img src="/images/practice-add-month.png"
-             class="no-border half"
-             alt="Create a list of months. Add a month to the end of the list." />
-      </section>
+							</code>
+						</pre>
+				</section>
 
-      <section>
-        <h3>Practice Array Manipulation</h3>
-        <img src="/images/practice-remove-month.png"
-             class="no-border half"
-             alt="Create a list of months. Add a month to the end of the list." />
-      </section>
+				<section>
+	        <h3>Arrays</h3>
+	        <h4>The Most Commonly User Methods Are</h4>
+	        <ul class="slide-bullets">
+	          <li class="fragment">.pop()</li>
+	          <li class="fragment">.push()</li>
+	          <li class="fragment">.shift()</li>
+	          <li class="fragment">.unshift()</li>
+	          <li class="fragment">.slice() - this selects a range</li>
+	          <li class="fragment">.splice() - this removes, or replaces</li>
+	          <li class="fragment">.sort()</li>
+	        </ul>
+	      </section>
 
-      <section>
-                <h3>While loops</h3>
-                <p>While will repeat the same code over and over until some condition is met.</p>
-                <pre><code>
-var bottlesOfBeer = 99;
-while (bottlesOfBeer &gt;= 1) {
-    console.log (bottlesOfBeer + ' bottles of beer on the wall');
-    bottlesOfBeer = bottlesOfBeer - 9;
+				<section>
+	        <h3>Practice Array Manipulation</h3>
+	        <img src="/images/practice-add-month.png"
+	             class="no-border half"
+	             alt="Create a list of months. Add a month to the end of the list." />
+	      </section>
+
+				<section>
+					<h3>That's pretty cool but...</h3>
+					<p class="fragment">Does the list have to look like that?</p>
+					<p class="fragment">Nope.</p>
+				</section>
+
+				<section>
+						<h3>For loops</h3>
+						<p>For loops repeat the same code over and over until a condition is met.</p>
+						<pre><code>
+// will count 1 to 10
+for (let i = 1; i &lt;= 10; i++) {
+  console.log(i);
 }
-				</code></pre>
-            </section>
-            <section>
-				<h3>Infinite Loops</h3>
-                <p>Make sure something changes in the loop, or your loop will go on forever...</p>
-			</section>
-            <section>
-                <h3>For loops</h3>
-                <p>For loops are very similar, but you declare a counter in the statement.</p>
-                <pre><code>
-//will count 1 to 10
-for (var i = 1; i &lt;= 10; i++) {
-    console.log (i);
-}
-				</code></pre>
-            </section>
-            <section>
-                <h3>Loops and logic</h3>
-                <p>You can add other statements or logical operators inside the loops.</p>
-                <pre><code>
-//Count from 1 to 50
-for (var i = 1; i &lt;= 50; i++) {
-    console.log (i);
-    //Says 'Buzz' after multiples of three
-    if (i % 3 == 0) {
-        console.log (' Buzz');
-    }
-    //Says 'Bang' after multiples of five
-    if (i % 5 == 0) {
-        console.log (' Bang');
-    }
-}
-				</code></pre>
-            </section>
-            <section>
-                <h3>Break</h3>
-                <p>To exit a loop, use the break statement.</p>
-                <pre><code>
-//Count from 100 to 200
-for (var i = 100; i &lt;= 200; i++) {
-    console.log('Testing ' + i);
-    //Stop at the first multiple of 7
-    if (i % 7 == 0) {
-        console.log('Found it! ' + i);
-        break;
-    }
-}
-				</code></pre>
-            </section>
+		</code></pre>
+				</section>
 
+				<section>
+	        <h3>Practice Array List Display</h3>
+	        <img src="/images/practice-add-month-loop.png"
+	             class="no-border half"
+	             alt="Create a list of months. Add a month to the end of the list." />
+	      </section>
+
+	      <section>
+	        <h3>Let's scope creep this activity a bit.</h3>
+	        <img src="/images/practice-remove-month.png"
+	             class="no-border half fragment"
+	             alt="Create a list of months. Add a month to the end of the list." />
+	      </section>
+
+				<section>
+						<h3>Working with numbers.</h3>
+							<p class="fragment">Arithmetic Operators let you can do math!</p>
+				</section>
+
+				<section>
+					<h3>Arithmetic Operators</h3>
+							<table class="smalltext">
+									<thead>
+										<tr>
+										 <th>Example</th>
+										 <th>Name</th>
+										 <th>Result</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+										 <td>-a</td>
+										 <td>Negation</td>
+										 <td>Opposite of a.</td>
+										</tr>
+										<tr>
+										 <td>a + b</td>
+										 <td>Addition</td>
+										 <td>Sum of a and b.</td>
+										</tr>
+										<tr>
+										 <td>a - b</td>
+										 <td>Subtraction</td>
+										 <td>Difference of a and b.</td>
+										</tr>
+										<tr>
+										 <td>a * b</td>
+										 <td>Multiplication</td>
+										 <td>Product of a and b.</td>
+										</tr>
+										<tr>
+										 <td>a / b</td>
+										 <td>Division</td>
+										 <td>Quotient of a and b.</td>
+										</tr>
+										<tr>
+										 <td>a % b</td>
+										 <td>Modulus</td>
+										 <td>Remainder of a divided by b.</td>
+										</tr>
+									</tbody>
+							</table>
+					</section>
+
+					<section>
+		        <h3>Create a Tip App</h3>
+		        <img src="/images/practice-tip-app.png"
+		             class="no-border half fragment"
+		             alt="Create an application that calculates a tip." />
+		      </section>
+
+					<section>
+						<h3>There's even more than basic <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Math</a>.</h3>
+					</section>
+
+					<section>
+						<h3>My Favorite Math Method</h3>
+						<pre><code>
+ Math.random();
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Create a Fortune Teller</h3>
+						<img src="/images/practice-fortune-teller.png"
+								 class="no-border half fragment"
+								 alt="Create a randomized fortune teller." />
+					</section>
+
+					<section>
+						<h3>We've Covered so much.</h3>
+
+						<ul>
+							<li class="fragment">Arrays</li>
+							<li class="fragment">For Loops</li>
+							<li class="fragment">Arithmetic Operators</li>
+							<li class="fragment">Math</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Open Forum</h3>
+						<h4>What kinds of questions do you have?</h4>
+						<p>What would you like to know more about?</p>
+					</section>
+
+					<section>
+						<h3>Thank you!</h3>
+						<h4>It has been my pleasure.</h4>
+						<p>Have a wonderful weekend!</p>
+					</section>
 
 
 				</div>

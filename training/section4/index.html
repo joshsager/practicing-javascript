@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<meta name="description" content="Practicing JavaScript is a 6 hour training
+		course. This training aims to teach first time JavaScripters and longtime dabblers
+		the fundamentals of the programming language within the framework of practice.">
+		<meta name="author" content="Joshua Sager">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<title>Practicing JavaScript: Training Slides</title>
+
+		<link rel="stylesheet" href="/css/reveal.css">
+		<link rel="stylesheet" href="/css/theme/black.css">
+		<link rel="stylesheet" href="/css/overrides.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="reveal">
+
+				<!-- Any section element inside of this container is displayed as a slide -->
+				<div class="slides">
+			  	<!-- Opening slide -->
+        	<section data-background="#f8f47c">
+          	<img
+						   class="no-border"
+					     src="/images/title-slide.png"
+							 alt="Practicing JavaScript. A training by Joshua Sager." />
+               <p>Section 4</p>
+        	</section>
+
+          <section>
+            <h3>Odds and Ends</h3>
+          </section>
+
+          <section>
+<h3>Sometimes Links Should Not Link</h3>
+<p class="fragment">At times you might have an <code>&lt;a href="#"&gt;link&lt;/a&gt;</code> but you don't want to the href to go to another page.</a>
+<p class="fragment">There is a built-in method to handle that:</p>
+    <pre class="fragment"><code>
+element.onclick = function (event) {
+event.preventDefault();
+};
+
+          </code></pre>
+          <p class="fragment">Note the event argument</p>
+          </section>
+
+          <section>
+				  <h3>Brand New HTML via JavaScript: Creating New Nodes</h3>
+				  <p class="fragment">The <code>document</code> object also provides ways to create nodes from scratch:</p>
+				  <pre class="fragment"><code>
+document.createElement(tagName);
+document.createTextNode(text);
+document.appendChild();
+	        </code></pre>
+			    </section>
+
+			    <section>
+				  <h3>Creating New Nodes: Sample Code</h3>
+				  <pre class="fragment"><code>
+var pageNode = document.getElementsByTagName('body')[0];
+
+var newImg = document.createElement('img');
+newImg.src = 'http://placebear.com/400/300';
+newImg.style.border = '1px solid black';
+pageNode.appendChild(newImg);
+
+var newParagraph = document.createElement('p');
+var paragraphText = document.createTextNode('Squee!');
+newParagraph.appendChild(paragraphText);
+pageNode.appendChild(newParagraph);
+	        </code></pre>
+			    </section>
+
+
+
+				</div>
+  		<footer>
+      </footer>
+		</div>
+
+		<script src="/lib/js/head.min.js"></script>
+		<script src="/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '/plugin/markdown/marked.js' },
+					{ src: '/plugin/markdown/markdown.js' },
+					{ src: '/plugin/notes/notes.js', async: true },
+					{ src: '/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
